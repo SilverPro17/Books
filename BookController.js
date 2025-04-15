@@ -18,7 +18,7 @@ exports.getBooksByAuthor = (req, res) => {
 exports.getBookById = (req, res) => {
   const id = parseInt(req.params.id);
   const book = books.find(b => b.id === id);
-  if (!book) return res.status(404).json({ message: 'Livro não encontrado' });
+  if (!book) return res.status(404).json({ message: 'Livros não encontrado' });
   res.json(book);
 };
 
